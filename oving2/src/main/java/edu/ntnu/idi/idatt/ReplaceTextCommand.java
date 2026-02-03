@@ -1,6 +1,4 @@
-package øving2.oving2.src.main.java.edu.ntnu.idi.idatt;
-
-import øving2.TextCommand;
+package edu.ntnu.idi.idatt;
 
 public class ReplaceTextCommand implements TextCommand {
 
