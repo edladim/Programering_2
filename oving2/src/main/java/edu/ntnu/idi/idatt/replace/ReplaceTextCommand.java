@@ -1,9 +1,11 @@
-package edu.ntnu.idi.idatt;
+package edu.ntnu.idi.idatt.replace;
+
+import edu.ntnu.idi.idatt.TextCommand;
 
 public class ReplaceTextCommand implements TextCommand {
 
-  String target;
-  String replacement;
+  protected String target;
+  protected String replacement;
 
   public ReplaceTextCommand(String target, String replacement) {
     this.target = target;
