@@ -1,4 +1,4 @@
-package edu.ntnu.idi.idatt.replace;
+package src.main.java.edu.ntnu.idi.idatt.replace;
 
 public class ReplaceFirstTextCommand extends ReplaceTextCommand{
   public ReplaceFirstTextCommand(String target, String replacement) {
@@ -7,6 +7,9 @@ public class ReplaceFirstTextCommand extends ReplaceTextCommand{
 
   @Override
   public String execute(String text) {
+    if (text == null) {
+      throw new IllegalArgumentException("Text cannot be null");
+    }
     return text.replaceFirst(target, replacement);
   }
 }

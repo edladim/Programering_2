@@ -1,8 +1,15 @@
-package edu.ntnu.idi.idatt.Capitalize;
+package src.main.java.edu.ntnu.idi.idatt.Capitalize;
 
-public class CapitalizeWordsTextCommand extends CapitalizeTextCommand{
+public class CapitalizeWordsTextCommand extends CapitalizeTextCommand {
   @Override
   public String execute(String text) {
+    if (text == null) {
+      throw new IllegalArgumentException("Text cannot be null");
+    }
+    if (text.isEmpty()) {
+      return text;
+    }
+    
     String[] words = text.split(" ");
     StringBuilder capitalizedText = new StringBuilder();
 

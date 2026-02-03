@@ -1,6 +1,6 @@
-package edu.ntnu.idi.idatt.replace;
+package src.main.java.edu.ntnu.idi.idatt.replace;
 
-import edu.ntnu.idi.idatt.TextCommand;
+import src.main.java.edu.ntnu.idi.idatt.TextCommand;
 
 public class ReplaceTextCommand implements TextCommand {
 
@@ -8,12 +8,21 @@ public class ReplaceTextCommand implements TextCommand {
   protected String replacement;
 
   public ReplaceTextCommand(String target, String replacement) {
+    if (target == null) {
+      throw new IllegalArgumentException("Target cannot be null");
+    }
+    if (replacement == null) {
+      throw new IllegalArgumentException("Replacement cannot be null");
+    }
     this.target = target;
     this.replacement = replacement;
   }
 
   @Override
   public String execute(String text) {
+    if (text == null) {
+      throw new IllegalArgumentException("Text cannot be null");
+    }
     return text.replace(target, replacement);
   }
 
