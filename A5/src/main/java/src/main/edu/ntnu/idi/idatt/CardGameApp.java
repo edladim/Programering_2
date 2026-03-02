@@ -1,4 +1,4 @@
-package edu.ntnu.idi.idatt;
+package src.main.edu.ntnu.idi.idatt;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -15,23 +15,23 @@ public class CardGameApp extends Application {
   @Override
   public void start(Stage stage) {
 
-    // ======== Kort-område (venstre) ========
+    // Kort-område
     TextArea cardDisplay = new TextArea();
     cardDisplay.setEditable(false);
     cardDisplay.setPrefSize(400, 250);
 
-    // ======== Knapper (høyre) ========
+    // Knapper
     Button dealButton = new Button("Deal hand");
     Button checkButton = new Button("Check hand");
 
     VBox buttonBox = new VBox(20, dealButton, checkButton);
     buttonBox.setPadding(new Insets(20));
 
-    // ======== Øvre layout ========
+    // Øvre layout
     HBox topSection = new HBox(40, cardDisplay, buttonBox);
     topSection.setPadding(new Insets(20));
 
-    // ======== Resultatfelt nederst ========
+    //Resultatfelt
     TextField sumField = new TextField();
     sumField.setEditable(false);
 
@@ -57,10 +57,10 @@ public class CardGameApp extends Application {
     VBox bottomSection = new VBox(15, row1, row2);
     bottomSection.setPadding(new Insets(20));
 
-    // ======== Hovedlayout ========
+    // Hovedlayout
     VBox root = new VBox(10, topSection, bottomSection);
 
-    // ======== Button logic ========
+    // Button logic
     dealButton.setOnAction(e -> {
       currentHand = deck.dealHand(5);
       cardDisplay.setText(currentHand.toString());

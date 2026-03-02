@@ -1,6 +1,5 @@
-package edu.ntnu.idi.idatt;
+package src.main.edu.ntnu.idi.idatt;
 
-import javax.smartcardio.Card;
 import java.util.List;
 import java.util.stream.Collectors;
 

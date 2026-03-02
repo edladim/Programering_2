@@ -1,4 +1,4 @@
-package edu.ntnu.idi.idatt;
+package src.main.edu.ntnu.idi.idatt;
 
 import java.util.ArrayList;
 import java.util.Collections;
